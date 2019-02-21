@@ -1,0 +1,35 @@
+spring:
+       mvc:
+          static-path-pattern: /static/**  #静态资源路径
+       datasource:
+         url: jdbc:mysql://127.0.0.1:3306/springboot?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=true
+         driver-class-name: com.mysql.jdbc.Driver
+         username: mzs
+         password: 123456
+         druid:
+           initial-size: 5
+           min-idle: 5
+           max-active: 20
+           test-on-borrow: true
+           stat-view-servlet.allow: true
+       jpa:
+          properties:
+              hibernate:
+                 hbm2ddl.auto: update
+                 dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+              show-sql: true
+#thymeleaf模板位置引入
+       thymeleaf:
+           prefix: classpath:/templates/thymeleaf/
+           suffix: .html
+           encoding: UTF-8
+           servlet.content-type: text/html
+           cache: false  #模板缓存false
+#端口设置
+server:
+     port : 8089
+#spring boot 热启动
+     devtools:
+       restart:
+         enabled: true
+         additional-paths: src/main/java
