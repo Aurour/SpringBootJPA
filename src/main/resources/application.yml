@@ -1,11 +1,11 @@
 spring:
        mvc:
-          static-path-pattern: /static/**  #¾²Ì¬×ÊÔ´Â·¾¶
+          static-path-pattern: /static/**  #é™æ€èµ„æºè·¯å¾„
        datasource:
          url: jdbc:mysql://127.0.0.1:3306/springboot?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=true
          driver-class-name: com.mysql.jdbc.Driver
-         username: mzs
-         password: 123456
+         username: ccc
+         password: c666666
          druid:
            initial-size: 5
            min-idle: 5
@@ -18,17 +18,17 @@ spring:
                  hbm2ddl.auto: update
                  dialect: org.hibernate.dialect.MySQL5InnoDBDialect
               show-sql: true
-#thymeleafÄ£°åÎ»ÖÃÒıÈë
+#thymeleafæ¨¡æ¿ä½ç½®å¼•å…¥
        thymeleaf:
            prefix: classpath:/templates/thymeleaf/
            suffix: .html
            encoding: UTF-8
            servlet.content-type: text/html
-           cache: false  #Ä£°å»º´æfalse
-#¶Ë¿ÚÉèÖÃ
+           cache: false  #æ¨¡æ¿ç¼“å­˜false
+#ç«¯å£è®¾ç½®
 server:
      port : 8089
-#spring boot ÈÈÆô¶¯
+#spring boot çƒ­å¯åŠ¨
      devtools:
        restart:
          enabled: true
